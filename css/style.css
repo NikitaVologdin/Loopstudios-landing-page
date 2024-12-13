@@ -298,6 +298,7 @@ svg * {
 }
 
 .burger.active .burger__line {
+  display: block;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
