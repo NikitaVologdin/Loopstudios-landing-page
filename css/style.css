@@ -442,6 +442,12 @@ svg * {
   .leader-article__img {
     margin: 0;
   }
+  .leader-article__img {
+    min-width: 327px;
+    max-width: 731px;
+    width: 100%;
+    height: 100%;
+  }
   .leader-article__content {
     margin: 0;
     padding-top: 68px;
