@@ -529,9 +529,15 @@ svg * {
 @media (min-width: 768px) {
   .creations__list {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 450px 450px 450px;
+    gap: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .creations__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 450px 450px;
-    gap: 30px;
   }
 }
 

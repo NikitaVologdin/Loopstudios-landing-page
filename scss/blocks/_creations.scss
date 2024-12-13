@@ -65,9 +65,14 @@
 
     @include media.mobile-above {
         display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 450px 450px 450px;
+        gap: 30px;
+    }
+
+    @include media.tablet-above {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 450px 450px;
-        gap: 30px;
     }
 }
 
