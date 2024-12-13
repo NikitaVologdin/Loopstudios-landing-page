@@ -52,9 +52,13 @@
         background-color var(--transition-duration) ease-in,
         color var(--transition-duration) ease-in;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: var(--black);
         color: var(--white);
+    }
+    &:focus {
+        outline: none;
     }
 }
 
@@ -78,15 +82,18 @@
 
 .creations__item {
     position: relative;
-    &:hover .creations__item-link {
+    &:hover,
+    &:focus-within .creations__item-link {
         opacity: 1;
     }
-    &:hover .creations__item-title {
+    &:hover,
+    &:focus-within .creations__item-title {
         color: var(--black);
     }
 }
 
 .creations__item-link {
+    display: block;
     z-index: 1;
     position: absolute;
     top: 0;
@@ -97,6 +104,9 @@
     transition: opacity var(--transition-duration) ease-in;
     background-color: rgba(255, 255, 255, 0.75);
     cursor: pointer;
+    &:focus {
+        outline: 2px solid black;
+    }
 }
 
 .creations__item-title {

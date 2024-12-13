@@ -23,9 +23,15 @@
         width: 24px;
         background-color: var(--white);
         position: absolute;
-        bottom: 0;
+        bottom: -8px;
         left: 50%;
         transform: translate(-50%, 0);
         transition: opacity var(--transition-duration) ease-in-out;
+    }
+    &:focus::after {
+        opacity: 1;
+    }
+    &:focus {
+        outline: none;
     }
 }

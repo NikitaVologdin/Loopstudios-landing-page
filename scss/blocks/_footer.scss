@@ -83,6 +83,9 @@
 
     .footer__nav-link {
         padding: 0;
+        &:focus {
+            outline: 2px solid white;
+        }
     }
 
     .footer__social {
@@ -93,6 +96,12 @@
 
     .footer__social-list {
         justify-content: flex-end;
+    }
+
+    .footer__social-item {
+        &:focus-within {
+            outline: 2px solid white;
+        }
     }
 
     .footer__copy {
