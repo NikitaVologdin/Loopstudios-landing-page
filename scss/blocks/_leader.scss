@@ -1,0 +1,55 @@
+@use "../abstractions/mixins";
+@use "../abstractions/media";
+
+.leader-article {
+    margin-top: 315px;
+    position: relative;
+
+    &__img {
+        margin: 0 auto;
+    }
+}
+
+.leader-article__content {
+    max-width: 541px;
+    background-color: var(--white);
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 25px;
+
+    h2 {
+        font-family: "Josefin Sans", sans-serif;
+        text-transform: uppercase;
+        font-weight: 300;
+        line-height: 32px;
+        @include mixins.fluid-text(48, 32);
+        margin-bottom: 15px;
+    }
+    p {
+        line-height: 25px;
+    }
+}
+
+@include media.tablet-above {
+    .leader-article {
+        margin-top: 307px;
+        &__img {
+            margin: 0;
+        }
+    }
+    .leader-article__content {
+        margin: 0;
+        padding-top: 68px;
+        padding-left: 30px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        h2 {
+            line-height: 48px;
+            margin-bottom: 24px;
+        }
+    }
+}

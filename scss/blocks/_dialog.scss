@@ -1,0 +1,65 @@
+@use "../abstractions/mixins";
+@use "../abstractions/media";
+@use "../abstractions/functions";
+
+.dialog {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 42px 24px;
+    background-color: transparent;
+    overscroll-behavior: contain;
+    transition-behavior: allow-discrete;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transform: translate(0);
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 24px auto;
+        align-items: center;
+    }
+    &:modal {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    &::backdrop {
+        background-color: var(--black);
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 0px;
+        padding-bottom: 5px;
+    }
+    &__nav-list {
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    &__nav-link {
+        font-size: 24px;
+        line-height: 25px;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-family: "Josefin Sans", sans-serif;
+    }
+    &__close {
+        @include mixins.reset-button;
+        margin: 10px;
+        position: relative;
+        left: 8px;
+        cursor: pointer;
+    }
+}
+
+@starting-style {
+    .dialog {
+        transform: translate(100%);
+    }
+}

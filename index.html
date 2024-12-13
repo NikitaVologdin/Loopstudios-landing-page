@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Frontend Mentor | Loopstudios landing page</title>
+    <script defer src="/js/script.js"></script>
+  </head>
+  <body>
+    <picture>
+      <source
+        srcset="images/mobile/image-hero.webp"
+        media="(max-width: 520px)"
+      />
+      <source
+        srcset="images/desktop/image-hero.webp"
+        media="(min-width: 521px)"
+      />
+      <img
+        class="wallpaper"
+        src="images/mobile/image-hero.webp"
+        alt=""
+        width="375"
+        height="650"
+      />
+    </picture>
+    <div class="container">
+      <header class="header">
+        <img
+          class="header__logo"
+          src="/images/logo.svg"
+          alt="Loopstudios"
+          width="144"
+          height="24"
+        />
+        <button id="openMenu" class="burger visible-mobile">
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+        </button>
+        <nav id="nav" class="nav hidden-mobile">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Careers</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Events</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Products</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Support</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section>
+          <div class="hero">
+            <div class="hero__title-box">
+              <h1 class="hero__title">
+                Immersive<br />
+                experiences<br />
+                that deliver
+              </h1>
+            </div>
+          </div>
+        </section>
+        <section>
+          <article class="leader-article">
+            <img
+              class="leader-article__img"
+              src="/images/mobile/image-interactive.webp"
+              alt=""
+              srcset="
+                /images/mobile/image-interactive.webp  300w,
+                /images/desktop/image-interactive.webp 600w
+              "
+              sizes="(max-width:30rem) 80vw, 600px"
+            />
+            <div class="leader-article__content">
+              <h2>The leader in interactive VR</h2>
+              <p>
+                Founded in 2011, Loopstudios has been producing world-class
+                virtual reality projects for some of the best companies around
+                the globe. Our award-winning creations have transformed
+                businesses through digital experiences that bind to their brand.
+              </p>
+            </div>
+          </article>
+        </section>
+        <section class="creations">
+          <header class="creations__header">
+            <h3 class="creations__title">Our creations</h3>
+            <a class="creations__link" href="#">See all</a>
+          </header>
+          <ul class="creations__list">
+            <li class="creations__item">
+              <a class="creations__item-link" href="#"></a>
+              <picture>
+                <source
+                  srcset="images/mobile/image-deep-earth.webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="images/desktop/image-deep-earth.webp"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="creations__image"
+                  width="327"
+                  height="120"
+                  src="/images/mobile/image-deep-earth.webp"
+                  alt=""
+                />
+              </picture>
+
+              <h4 class="creations__item-title">DEEP EARTH</h4>
+            </li>
+            <li class="creations__item">
+              <a class="creations__item-link">#</a>
+              <picture>
+                <source
+                  srcset="images/mobile/image-night-arcade.webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="images/desktop/image-night-arcade.webp"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="creations__image"
+                  width="327"
+                  height="120"
+                  src="/images/mobile/image-night-arcade.webp"
+                  alt=""
+                />
+              </picture>
+
+              <h4 class="creations__item-title">NIGHT ARCADE</h4>
+            </li>
+            <li class="creations__item">
+              <a class="creations__item-link" href="#"></a>
+              <picture>
+                <source
+                  srcset="images/mobile/image-soccer-team.webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="images/desktop/image-soccer-team.webp"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="creations__image"
+                  width="327"
+                  height="120"
+                  src="/images/mobile/image-soccer-team.webp"
+                  alt=""
+                />
+              </picture>
+
+              <h4 class="creations__item-title">
+                Soccer<br />
+                team VR
+              </h4>
+            </li>
+            <li class="creations__item">
+              <a class="creations__item-link" href="#"></a>
+              <picture>
+                <source
+                  srcset="images/mobile/image-grid.webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="images/desktop/image-grid.webp"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="creations__image"
+                  width="327"
+                  height="120"
+                  src="/images/mobile/image-grid.webp"
+                  alt=""
+                />
+              </picture>
+
+              <h4 class="creations__item-title">The grid</h4>
+            </li>
+            <li class="creations__item">
+              <a class="creations__item-link" href="#"></a>
+              <picture>
+                <source
+                  srcset="images/mobile/image-from-above.webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="images/desktop/image-from-above.webp"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="creations__image"
+                  width="327"
+                  height="120"
+                  src="/images/mobile/image-from-above.webp"
+                  alt=""
+                />
+              </picture>
+
+              <h4 class="creations__item-title">From up above VR</h4>
+            </li>
+            <li class="creations__item">
+              <a class="creations__item-link" href="#"></a>
+              <picture>
+                <source
+                  srcset="images/mobile/image-pocket-borealis.webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="images/desktop/image-pocket-borealis.webp"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="creations__image"
+                  width="327"
+                  height="120"
+                  src="/images/mobile/image-pocket-borealis.webp"
+                  alt=""
+                />
+              </picture>
+
+              <h4 class="creations__item-title">Pocket borealis</h4>
+            </li>
+            <li class="creations__item">
+              <a class="creations__item-link" href="#"></a>
+              <picture>
+                <source
+                  srcset="images/mobile/image-curiosity.webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="images/desktop/image-curiosity.webp"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="creations__image"
+                  width="327"
+                  height="120"
+                  src="/images/mobile/image-curiosity.webp"
+                  alt=""
+                />
+              </picture>
+
+              <h4 class="creations__item-title">The curiosity</h4>
+            </li>
+            <li class="creations__item">
+              <a class="creations__item-link" href="#"></a>
+              <picture>
+                <source
+                  srcset="images/mobile/image-fisheye.webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="images/desktop/image-fisheye.webp"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  class="creations__image"
+                  width="327"
+                  height="120"
+                  src="/images/mobile/image-fisheye.webp"
+                  alt=""
+                />
+              </picture>
+              <h4 class="creations__item-title">Make it fisheye</h4>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <img
+          class="footer__img"
+          src="/images/logo.svg"
+          alt="Loopstudios"
+          width="144"
+          height="24"
+        />
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#">About</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#">Careers</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#">Events</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#">Products</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="#">Support</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__social">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+                <img
+                  src="/images/icon-facebook.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
+                <span class="visually-hidden">facebook</span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+                <img
+                  src="/images/icon-twitter.svg"
+                  alt=""
+                  width="24"
+                  height="20"
+                />
+                <span class="visually-hidden">twitter</span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+                <img
+                  src="/images/icon-pinterest.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
+                <span class="visually-hidden">pinterest</span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#">
+                <img
+                  src="/images/icon-instagram.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
+                <span class="visually-hidden">instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer__copy">
+          &copy; 2021 Loopstudios. All rights reserved.
+        </p>
+      </footer>
+    </div>
+    <div class="footer__background"></div>
+
+    <dialog id="dialog" class="dialog">
+      <div class="dialog__wrapper">
+        <header class="dialog__header">
+          <a href="#">
+            <img src="/images/logo.svg" alt="" width="144" height="24" />
+          </a>
+          <button class="dialog__close" id="closeMenu">
+            <img src="/images/icon-close.svg" alt="" width="20" height="20" />
+            <span class="visually-hidden">Close menu</span>
+          </button>
+        </header>
+        <div class="dialog__body">
+          <nav id="nav" class="dialog__nav">
+            <ul class="dialog__nav-list">
+              <li class="dialog__nav-item">
+                <a href="#" class="dialog__nav-link">About</a>
+              </li>
+              <li class="dialog__nav-item">
+                <a href="#" class="dialog__nav-link">Careers</a>
+              </li>
+              <li class="dialog__nav-item">
+                <a href="#" class="dialog__nav-link">Events</a>
+              </li>
+              <li class="dialog__nav-item">
+                <a href="#" class="dialog__nav-link">Products</a>
+              </li>
+              <li class="dialog__nav-item">
+                <a href="#" class="dialog__nav-link">Support</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
+<!-- <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div> -->

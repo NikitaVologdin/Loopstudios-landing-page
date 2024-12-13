@@ -1,0 +1,135 @@
+@use "../abstractions/mixins";
+@use "../abstractions/media";
+
+.creations {
+    margin-top: 120px;
+    color: var(--black);
+    font-family: "Josefin Sans", sans-serif;
+    position: relative;
+}
+
+.creations__header {
+    margin-bottom: 48px;
+
+    @include media.mobile-above {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include media.mobile-above {
+        margin-bottom: 80px;
+    }
+}
+
+.creations__title {
+    text-align: center;
+    font-weight: 300;
+    @include mixins.fluid-text(48, 32);
+    line-height: 32px;
+    text-transform: uppercase;
+
+    @include media.mobile-above {
+        line-height: 48px;
+    }
+}
+
+.creations__link {
+    @include mixins.flex-center();
+    width: 157px;
+    height: 40px;
+    background-color: var(--white);
+    color: var(--black);
+    letter-spacing: 5px;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: "Alata", sans-serif;
+    text-transform: uppercase;
+    border: 1px solid var(--black);
+    position: absolute;
+    bottom: -67px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition:
+        background-color var(--transition-duration) ease-in,
+        color var(--transition-duration) ease-in;
+
+    &:hover {
+        background-color: var(--black);
+        color: var(--white);
+    }
+}
+
+.creations__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include media.mobile-above {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 450px 450px;
+        gap: 30px;
+    }
+}
+
+.creations__item {
+    position: relative;
+    &:hover .creations__item-link {
+        opacity: 1;
+    }
+    &:hover .creations__item-title {
+        color: var(--black);
+    }
+}
+
+.creations__item-link {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity var(--transition-duration) ease-in;
+    background-color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+}
+
+.creations__item-title {
+    width: 40%;
+    font-weight: 300;
+    @include mixins.fluid-text(32, 24);
+    color: var(--white);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-transform: uppercase;
+    line-height: 24px;
+    z-index: 2;
+    transition: color var(--transition-duration) ease-in;
+
+    @include media.mobile-above {
+        line-height: 32px;
+        width: 70%;
+    }
+}
+
+.creations__image {
+    width: 100%;
+    height: 100%;
+}
+
+@include media.mobile-above {
+    .creations {
+        margin-top: 184px;
+    }
+
+    .creations__item-title {
+        bottom: 32px;
+        left: 32px;
+    }
+
+    .creations__link {
+        position: static;
+        transform: none;
+    }
+}

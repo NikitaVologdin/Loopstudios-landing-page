@@ -1,0 +1,21 @@
+@use "../abstractions/media";
+
+.header {
+    position: relative;
+    z-index: 1;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@include media.tablet-above {
+    .header {
+        padding-top: 64px;
+    }
+
+    .header__logo {
+        width: 192px;
+        height: 32px;
+    }
+}
