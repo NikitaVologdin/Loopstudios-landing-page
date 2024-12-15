@@ -439,6 +439,7 @@ svg * {
 }
 .leader-article__content p {
   line-height: 25px;
+  opacity: 0.5;
 }
 
 @media (min-width: 1024px) {
@@ -461,6 +462,7 @@ svg * {
     position: absolute;
     right: 0;
     bottom: 0;
+    text-align: left;
   }
   .leader-article__content h2 {
     line-height: 48px;
