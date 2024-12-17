@@ -5,29 +5,32 @@
 .dialog {
     height: 100%;
     width: 100%;
+    max-width: 100%;
+    max-height: 100%;
     margin: 0;
     border: 0;
     padding: 42px 24px;
     background-color: transparent;
     overscroll-behavior: contain;
-    transition-behavior: allow-discrete;
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-    transform: translate(0);
+    background-color: var(--black);
+    opacity: 0;
+    transition:
+        opacity 0.3s,
+        transform 0.5s,
+        display 0.3s 0.3s allow-discrete;
+    transform: translateX(110%);
+
+    &[open] {
+        transform: translateX(0%);
+
+        opacity: 1;
+    }
     &__wrapper {
         height: 100%;
         width: 100%;
         display: grid;
         grid-template-rows: 24px auto;
         align-items: center;
-    }
-    &:modal {
-        max-width: 100%;
-        max-height: 100%;
-    }
-    &::backdrop {
-        background-color: var(--black);
     }
     &__header {
         display: flex;
@@ -59,7 +62,8 @@
 }
 
 @starting-style {
-    .dialog {
-        transform: translate(100%);
+    .dialog[open] {
+        transform: translateX(110%);
+        opacity: 0;
     }
 }

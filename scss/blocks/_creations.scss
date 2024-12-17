@@ -82,11 +82,11 @@
 
 .creations__item {
     position: relative;
-    &:hover,
+    &:hover .creations__item-link,
     &:focus-within .creations__item-link {
         opacity: 1;
     }
-    &:hover,
+    &:hover .creations__item-title,
     &:focus-within .creations__item-title {
         color: var(--black);
     }
@@ -104,8 +104,8 @@
     transition: opacity var(--transition-duration) ease-in;
     background-color: rgba(255, 255, 255, 0.75);
     cursor: pointer;
-    &:focus {
-        outline: 2px solid black;
+    &:focus-visible {
+        outline: none;
     }
 }
 

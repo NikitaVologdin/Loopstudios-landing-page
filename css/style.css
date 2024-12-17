@@ -351,16 +351,21 @@ svg * {
 .dialog {
   height: 100%;
   width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   margin: 0;
   border: 0;
   padding: 42px 24px;
   background-color: transparent;
   overscroll-behavior: contain;
-  transition-behavior: allow-discrete;
-  transition-property: transform;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  transform: translate(0);
+  background-color: var(--black);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.5s, display 0.3s 0.3s allow-discrete;
+  transform: translateX(110%);
+}
+.dialog[open] {
+  transform: translateX(0%);
+  opacity: 1;
 }
 .dialog__wrapper {
   height: 100%;
@@ -368,13 +373,6 @@ svg * {
   display: grid;
   grid-template-rows: 24px auto;
   align-items: center;
-}
-.dialog:modal {
-  max-width: 100%;
-  max-height: 100%;
-}
-.dialog::backdrop {
-  background-color: var(--black);
 }
 .dialog__header {
   display: flex;
@@ -407,8 +405,9 @@ svg * {
 }
 
 @starting-style {
-  .dialog {
-    transform: translate(100%);
+  .dialog[open] {
+    transform: translateX(110%);
+    opacity: 0;
   }
 }
 .leader-article {
@@ -555,10 +554,10 @@ svg * {
 .creations__item {
   position: relative;
 }
-.creations__item:hover, .creations__item:focus-within .creations__item-link {
+.creations__item:hover .creations__item-link, .creations__item:focus-within .creations__item-link {
   opacity: 1;
 }
-.creations__item:hover, .creations__item:focus-within .creations__item-title {
+.creations__item:hover .creations__item-title, .creations__item:focus-within .creations__item-title {
   color: var(--black);
 }
 
@@ -575,8 +574,8 @@ svg * {
   background-color: rgba(255, 255, 255, 0.75);
   cursor: pointer;
 }
-.creations__item-link:focus {
-  outline: 2px solid black;
+.creations__item-link:focus-visible {
+  outline: none;
 }
 
 .creations__item-title {
